@@ -1,6 +1,6 @@
 学习笔记
 
-##pip
+## pip
 [`pip`](https://pip.pypa.io/en/stable/) is like `npm` for `node`.
 ```
 pip install SomePackage
@@ -14,14 +14,15 @@ pip freeze > requirements.txt
 pip install -r requirements.txt
 ```
 
-##venv
+## venv
+
 Create and manage virtual environments. 
 ```
 python3 -m venv tutorial-env
 source tutorial-env/bin/activate
 ```
 
-##requests and BeautifulSoup Example
+## requests and BeautifulSoup Example
 ```
 import requests
 from bs4 import BeautifulSoup as bs
@@ -41,7 +42,7 @@ for tags in bs_info.find_all('div', attrs={'class': 'hd'}):
     print(atag.find('span').text)
 ```
 
-##lxml.etree, XPath and Pandas Example
+## lxml.etree, XPath and Pandas Example
 ```
 import requests
 import lxml.etree
@@ -72,17 +73,20 @@ import pandas
 movie1 = pandas.DataFrame(data=my_list)
 movie1.to_csv('./movie1.csv', encoding='utf8', index=False, header=False)
 ```
-##[Working with XPath](https://docs.scrapy.org/en/latest/topics/selectors.html#working-with-xpaths)
+## [Working with XPath](https://docs.scrapy.org/en/latest/topics/selectors.html#working-with-xpaths)
 
-##Delay request
+## Delay request
 ```
 from time import sleep
 sleep(10)
 ```
 
-##Scrapy
+## Scrapy
+
 [Architecture review](https://docs.scrapy.org/en/latest/topics/architecture.html)
+
 [Quick tutorial](https://docs.scrapy.org/en/latest/intro/tutorial.html)
+
 ```
 scrapy startproject example example.com
 cd example/spiders
@@ -109,4 +113,5 @@ class Assignment2Pipeline:
         return item
 ```
 **yield vs return**
+
 If you use `return`, your for-loop will finish after the first iteration. In contrast to `return`, `yield` doesn't exit the function and continues with the your for-loop.
