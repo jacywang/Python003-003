@@ -18,6 +18,7 @@ s.get(pre_login_url, headers=headers)
 sleep(1)
 
 login_url = 'https://shimo.im/lizard-api/auth/password/login'
+# Change to real email and password when running
 form_data = {
   'email': 'email@example.com',
   'password': 'password',
